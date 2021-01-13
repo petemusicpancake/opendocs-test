@@ -1,0 +1,31 @@
+@import '../../scss/variables.scss';
+
+.homeDefault {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $homepage-bg;
+
+    .homeDefault__header {
+        display: flex;
+        align-items: center;
+        max-width: 1360px;
+        margin: 0 auto;
+
+        .logo {
+            flex: .3;
+
+            img {
+                margin-top: 20px;
+
+            }
+        }
+
+        .menu {
+            flex: 1;
+        }
+    }
+    .homeDefault__body {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+}

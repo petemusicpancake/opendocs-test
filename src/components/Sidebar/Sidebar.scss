@@ -1,0 +1,38 @@
+@import '../../scss/variables.scss';
+
+.sidebar {
+    flex: .3;
+    background-color: #fff;
+
+    .sidebar__logo {
+        padding-top: 16px;
+        padding-left: 40px;
+
+        img {
+            object-fit: contain;
+            margin-top: 20px;
+        }
+    }
+
+    .sidebar__menu {
+        margin-top: 70px;
+
+        ul li {
+            border-top: $documents-border;
+            padding: 23px 0 23px 34px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            color: $text-grey;
+
+            img {
+                margin-right: 20px;
+            }
+        }
+        li:nth-child(2) {
+            border-bottom: $documents-border;
+        }
+    }
+}

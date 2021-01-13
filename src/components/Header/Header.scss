@@ -1,0 +1,102 @@
+@import '../../scss/variables.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .header__searchBar {
+        display: flex;
+        align-items: center;
+        padding: 17.5px 0 17.5px 20px;
+        background-color: #fff;
+        flex: .5;
+        border-radius: $border-radius-l;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: $text-grey;
+
+        input {
+            margin-left: 15px;
+            outline: none;
+            border: none;
+            width: 100%;
+        }
+    }
+
+    .header__menu {
+        flex: .4;
+
+        .welcome {
+            text-transform: $material-textTransform;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            color: $text-black;
+            padding: 10px 20px;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .burger {
+            display: flex;
+            align-items: center;
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                text-transform: $material-textTransform;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                color: $text-black;
+                padding: 10px 20px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 784px) {
+    .header .header__searchBar {
+        flex: 1;
+        margin-left: 10px;
+    }
+
+    .header .header__menu ul {
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        transform: translate(150%);
+        background-color: #fff;
+        width: 120px;
+        padding: 10px 5px;
+        color: $text-black;
+        box-shadow: $box-shadow;
+        transition: $transition-3s $visibility-transition;
+
+    }
+
+    .header .header__menu ul.active {
+        transform: translate(0%);
+        transition: $transition-3s;
+
+        visibility: visible;
+
+    }
+
+    .header .header__menu .burger {
+        display: flex;
+        margin-left: auto;
+    }
+}

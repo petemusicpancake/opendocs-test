@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import HomePage from './components/HomePage/HomePage';
+import HomePageWithoutAuth from './components/HomePageWithoutAuth/HomePageWithoutAuth';
+import { Redirect } from 'react-router-dom';
+import { isLoaded } from 'react-redux-firebase'
+import { useSelector } from 'react-redux';
+import Preloader from './components/Preloader/Preloader';
 
-function App() {
+
+const AuthIsLoaded = ({ children }) => {
+  const auth = useSelector(state => state.firebase.auth)
+  if (!isLoaded(auth)) return (<Preloader />)
+  return children
+}
+
+const App = () => {
+  const { isEmpty } = useSelector(state => state.firebase.auth)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthIsLoaded>
+      <div className="app">
+        {!isEmpty ? <HomePage /> : <HomePageWithoutAuth />}
+        {!isEmpty && <Redirect to='/' />}
+      </div>
+    </AuthIsLoaded>
   );
 }
 

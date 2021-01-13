@@ -1,0 +1,14 @@
+@import '../../scss/variables.scss';
+
+.homepage {
+    max-width: $max-width;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: $homepage-bg;
+    display: flex;
+    .homepage__body {
+        flex: .65;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

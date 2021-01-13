@@ -1,0 +1,31 @@
+$max-width: 1440px;
+
+$homepage-bg: #F2F6F8;
+$text-grey: #7E899F;
+$text-black: #272F3B;
+$text-blue: #2896CC;
+$text-blue-primary: #1F8BC0;
+$display-bg: #F3F4F5;
+$dotsicon-color: #66728A;
+$services-border-color: #D8D8D8;
+$transparent-black: rgba($color: #000000, $alpha: .7);
+
+$documents-border: 1px solid #E8ECF0;
+$input-border: 1px solid #D1D5DE;
+
+$material-textTransform: capitalize !important;
+$material-textDefault: inherit !important;
+
+$transition-2s: .2s ease-in-out;
+$transition-3s: .3s ease-in-out;
+$visibility-transition: visibility 0s;
+
+$box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+$grid-layout: repeat(auto-fit, minmax(210px, 1fr));
+
+$border-radius-l: 12px;
+$border-radius-m: 15px;
+
+$animation-motion: motion 2.5s infinite cubic-bezier(0.89, 0.03, 0.06, 1.5);
+$animation-dynamic: dynamic 5s infinite cubic-bezier(0.89, 0.03, 0.06, 1.5);

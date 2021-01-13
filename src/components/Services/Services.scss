@@ -1,0 +1,96 @@
+@import '../../scss/variables.scss';
+
+.services {
+    margin-top: 60px;
+    background-color: #fff;
+    padding: 28px 40.8px 69px;
+    border-radius: 15px;
+
+    .services__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 32.5px;
+        border-bottom: $services-border-color;
+
+        .title>h2 {
+            color: $text-black;
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: $dotsicon-color;
+            font-weight: normal;
+            font-size: 13px;
+        }
+
+        .start-uploading>button {
+            width: 231.2px;
+            height: 55px;
+            background-color: $text-blue;
+            border-radius: $border-radius-l;
+            color: #fff;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: $material-textTransform;
+        }
+    }
+
+    .services__body {
+        padding-top: 40.5px;
+        display: grid;
+        grid-template-columns: $grid-layout;
+
+        .option {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            img {
+                object-fit: contain;
+                margin-bottom: 20.75px;
+                margin-top: 20px;
+            }
+
+            h3 {
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                color: $text-black;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: normal;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                color: $dotsicon-color;
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width: 945px) {
+    .services .services__header {
+        flex-direction: column;
+
+        .title {
+            text-align: center;
+        }
+
+        .start-uploading {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 1009px) {
+    .services .services__body .option p {
+        width: 80%;
+    }
+}
